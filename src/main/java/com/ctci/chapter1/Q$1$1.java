@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
- * Is Unique:
+ * Question 1.1: Is Unique.
  * Implement an algorithm to determine if a string has all unique characters.
  * What if you cannot use additional data structures?
  */
-class Q1 {
+class Q$1$1 {
 
     /**
      * Runtime: O(N * logN)
@@ -90,21 +90,21 @@ class Q1 {
     @ValueSource(strings = {"abcde", "kite", "padle"})
     void checkUnique(String value) {
         String msg = String.format("'%s' have all unique characters", value);
-        assertTrue(Q1.isUniqueByHashMap(value), msg);
-        assertTrue(Q1.isUniqueByArray(value), msg);
-        assertTrue(Q1.isUniqueBySort(value.toCharArray()), msg);
-        assertTrue(Q1.isUniqueByPairs(value), msg);
-        assertTrue(Q1.isUniqueByBitShift(value), msg);
+        assertTrue(isUniqueByHashMap(value), msg);
+        assertTrue(isUniqueByArray(value), msg);
+        assertTrue(isUniqueBySort(value.toCharArray()), msg);
+        assertTrue(isUniqueByPairs(value), msg);
+        assertTrue(isUniqueByBitShift(value), msg);
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"hello", "apple", "abcddd", "aaabcd"})
     void checkNonUnique(String value) {
         String msg = String.format("'%s' doesn't have all unique characters", value);
-        assertFalse(Q1.isUniqueByHashMap(value), msg);
-        assertFalse(Q1.isUniqueByArray(value), msg);
-        assertFalse(Q1.isUniqueBySort(value.toCharArray()), msg);
-        assertFalse(Q1.isUniqueByPairs(value), msg);
-        assertFalse(Q1.isUniqueByBitShift(value), msg);
+        assertFalse(isUniqueByHashMap(value), msg);
+        assertFalse(isUniqueByArray(value), msg);
+        assertFalse(isUniqueBySort(value.toCharArray()), msg);
+        assertFalse(isUniqueByPairs(value), msg);
+        assertFalse(isUniqueByBitShift(value), msg);
     }
 }

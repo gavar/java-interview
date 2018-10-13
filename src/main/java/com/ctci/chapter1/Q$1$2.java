@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 /**
- * Check Permutation:
+ * Question 1.2: Check Permutation.
  * Given two strings, write a method to decide if one is a permutation of the other.
  */
-class Q2 {
+class Q$1$2 {
     /**
      * Assumptions:
      * - none
@@ -93,8 +93,8 @@ class Q2 {
     })
     void checkIsPermutation(String a, String b) {
         String msg = String.format("'%s' is permutation of '%s'", a, b);
-        assertTrue(Q2.hasPermutationByHashMap(a, b), msg);
-        assertTrue(Q2.hasPermutationByAlphabet(a, b, 128), msg);
+        assertTrue(hasPermutationByHashMap(a, b), msg);
+        assertTrue(hasPermutationByAlphabet(a, b, 128), msg);
     }
 
     @ParameterizedTest
@@ -110,7 +110,7 @@ class Q2 {
     })
     void checkNoPermutation(String a, String b) {
         String msg = String.format("'%s' is not permutation of '%s'", a, b);
-        assertFalse(Q2.hasPermutationByHashMap(a, b), msg);
-        assertFalse(Q2.hasPermutationByAlphabet(a, b, 128), msg);
+        assertFalse(hasPermutationByHashMap(a, b), msg);
+        assertFalse(hasPermutationByAlphabet(a, b, 128), msg);
     }
 }
